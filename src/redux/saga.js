@@ -1,6 +1,6 @@
 import {takeEvery, call, put} from "redux-saga/effects";
 import {DATA_INFO_PAGES, REQUESTS_CARTOONS} from "./actionType/actionType";
-import {dataInfoPages} from "./reducerCartoons/reducerCartoons";
+// import {dataInfoPages} from "./reducerCartoons/reducerCartoons";
 
 const URL_API = `https://rickandmortyapi.com/api/character`;
 
@@ -11,8 +11,9 @@ export function* sagaApp() {
 
 function* sagaWorker() {
     try {
-        const payload = yield call(fetchCartoons);
-        yield put({type: DATA_INFO_PAGES, payload});
+        const pages = yield call(fetchCartoons);
+        yield put({type: DATA_INFO_PAGES, pages: pages});
+        // yield put(dataInfoPages(pages: payload))
     } catch (e) {
         console.log(e)
     }
@@ -28,6 +29,5 @@ async function fetchCartoons() {
         pages.push(i + 1);
     }
 
-    // не понятно как передать параметры
-    dataInfoPages(pages);
+    return pages;
 }

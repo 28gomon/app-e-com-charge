@@ -51,7 +51,8 @@ export function getCartoonsPageDispatch() {
             pages.push(i + 1);
         }
 
-        dispatch(dataInfoPages(pages));
+        dispatch({type: DATA_INFO_PAGES, pages: pages})
+        // dispatch(dataInfoPages(pages));
     }
 }
 
