@@ -1,3 +1,7 @@
+/*
+Код не рабочий. Требуется детальный разбор redux-saga
+ */
+
 import {takeEvery, call, put} from "redux-saga/effects";
 import {DATA_INFO_PAGES, REQUESTS_CARTOONS} from "./actionType/actionType";
 // import {dataInfoPages} from "./reducerCartoons/reducerCartoons";

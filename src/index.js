@@ -10,8 +10,10 @@ import {reducer} from "./redux/reducer";
 import createSagaMiddleware from 'redux-saga';
 import {sagaApp} from "./redux/saga";
 
+// redux-saga -> не рабочий
 const saga = createSagaMiddleware();
 
+// react-redux
 const store = createStore(
     combineReducers({
         cartoons: reducer

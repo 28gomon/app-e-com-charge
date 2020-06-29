@@ -4,12 +4,12 @@ const URL_API = `https://rickandmortyapi.com/api/character`;
 
 
 // getCartoonsPageDispatch
-export function dataInfoPages(pages) {
-    return {
-        type: DATA_INFO_PAGES,
-        pages
-    }
-}
+// export function dataInfoPages(pages) {
+//     return {
+//         type: DATA_INFO_PAGES,
+//         pages
+//     }
+// }
 
 // loadPostsDispatch
 export function loadPosts(data) {
@@ -51,7 +51,7 @@ export function getCartoonsPageDispatch() {
             pages.push(i + 1);
         }
 
-        dispatch({type: DATA_INFO_PAGES, pages: pages})
+        dispatch({type: DATA_INFO_PAGES, pages})
         // dispatch(dataInfoPages(pages));
     }
 }
