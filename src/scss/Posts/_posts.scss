@@ -1,0 +1,10 @@
+.posts {
+    width: 100%;
+    max-width: 680px;
+    padding: {
+        top: 80px;
+        bottom: 80px;
+    }
+}
+
+@import './post';

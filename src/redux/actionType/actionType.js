@@ -1,0 +1,5 @@
+export const DATA_INFO_PAGES = 'DATA_INFO_PAGES';
+export const REQUESTS_CARTOONS = 'REQUESTS_CARTOONS';
+export const LOAD_POSTS = 'LOAD_POSTS';
+export const DRAWER_DATA = 'DRAWER_DATA';
+export const DRAWER_CLEAR = 'DRAWER_CLEAR';
