@@ -27,5 +27,7 @@ async function fetchCartoons() {
     for (let i = 0; i < data.info.pages; i++) {
         pages.push(i + 1);
     }
+
+    // не понятно как передать параметры
     dataInfoPages(pages);
 }
