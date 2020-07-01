@@ -1,7 +1,7 @@
 import {DATA_INFO_PAGES, DRAWER_CLEAR, DRAWER_DATA, LOAD_POSTS} from "./actionType/actionType";
 
 const initialState = {
-    cartoons: [],
+    cartoons: null, // []
     data: [],
     drawer: false,
     postDrawer: []
@@ -13,7 +13,7 @@ export function reducer(state = initialState, action) {
 
         case DATA_INFO_PAGES:
             return {
-                ...state, cartoons: action.pages
+                ...state, cartoons: action.count
             }
 
         case LOAD_POSTS:

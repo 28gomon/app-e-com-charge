@@ -45,13 +45,15 @@ export function getCartoonsPageDispatch() {
         const response = await fetch(URL_API);
         const data = await response.json();
 
-        let pages = [];
+        const count = +data.info.pages;
 
-        for (let i = 0; i < data.info.pages; i++) {
-            pages.push(i + 1);
-        }
+        // let pages = [];
+        //
+        // for (let i = 0; i < data.info.pages; i++) {
+        //     pages.push(i + 1);
+        // }
 
-        dispatch({type: DATA_INFO_PAGES, pages})
+        dispatch({type: DATA_INFO_PAGES, count})
         // dispatch(dataInfoPages(pages));
     }
 }
