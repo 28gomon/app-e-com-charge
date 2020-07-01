@@ -32,7 +32,9 @@ class Cartoons extends React.Component {
                                 drawerDispatch={this.props.drawerDispatch}
                             />
                         </Suspense>
-
+                        {
+                            console.log(this.props.cartoons)
+                        }
                         <Drawer
                             drawer={this.props.drawer}
                             postDrawer={this.props.postDrawer}

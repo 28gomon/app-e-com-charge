@@ -3,14 +3,14 @@ import Item from "./Item/Item";
 
 const Pagination = props => {
 
-    const paginationCounts = [];
-
     function numberPage() {
+
+        const paginationCounts = [];
 
         for (let i = 0; i < props.pagination; i++) {
             paginationCounts.push(i + 1);
         }
-        
+
         return paginationCounts;
     }
 

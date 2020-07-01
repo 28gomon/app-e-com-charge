@@ -1,4 +1,9 @@
-import {DATA_INFO_PAGES, DRAWER_CLEAR, DRAWER_DATA, LOAD_POSTS} from "./actionType/actionType";
+import {
+    DATA_INFO_PAGES,
+    DRAWER_CLEAR,
+    DRAWER_DATA,
+    LOAD_POSTS
+} from "./actionType/actionType";
 
 const initialState = {
     cartoons: null, // []

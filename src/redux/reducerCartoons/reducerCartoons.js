@@ -1,15 +1,11 @@
-import {DATA_INFO_PAGES, DRAWER_CLEAR, DRAWER_DATA, LOAD_POSTS} from "../actionType/actionType";
+import {
+    DRAWER_CLEAR,
+    DRAWER_DATA,
+    LOAD_POSTS,
+    REQUESTS_CARTOONS_PAGE
+} from "../actionType/actionType";
 
 const URL_API = `https://rickandmortyapi.com/api/character`;
-
-
-// getCartoonsPageDispatch
-// export function dataInfoPages(pages) {
-//     return {
-//         type: DATA_INFO_PAGES,
-//         pages
-//     }
-// }
 
 // loadPostsDispatch
 export function loadPosts(data) {
@@ -37,24 +33,8 @@ export function drawerClear() {
 }
 
 export function getCartoonsPageDispatch() {
-    // return {
-    //     type: DATA_INFO_PAGES
-    // }
-    return async dispatch => {
-
-        const response = await fetch(URL_API);
-        const data = await response.json();
-
-        const count = +data.info.pages;
-
-        // let pages = [];
-        //
-        // for (let i = 0; i < data.info.pages; i++) {
-        //     pages.push(i + 1);
-        // }
-
-        dispatch({type: DATA_INFO_PAGES, count})
-        // dispatch(dataInfoPages(pages));
+    return {
+        type: REQUESTS_CARTOONS_PAGE
     }
 }
 
